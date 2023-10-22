@@ -1,5 +1,4 @@
 
-import React from 'react'
 import * as app from './app.styles'
 
 function App() {
