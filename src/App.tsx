@@ -1,13 +1,14 @@
 
 import * as app from './app.styles'
+import { AppRoutes } from './routes';
 
 function App() {
 
   return (
-    <app.Main >
-    <h1>Hola</h1>
+    <app.Main>
+      <AppRoutes />
     </app.Main>
-  )
+  );
 }
 
 export default App

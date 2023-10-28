@@ -1,5 +1,5 @@
 {
-  "homepage":"https://salino3.github.io/vite-react-context-users",
+  "homepage": "https://salino3.github.io/vite-react-context-users",
   "name": "vite-react-context-users",
   "private": true,
   "version": "0.0.0",
@@ -16,7 +16,8 @@
     "@emotion/styled": "^11.11.0",
     "animate.css": "^4.1.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.17.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
