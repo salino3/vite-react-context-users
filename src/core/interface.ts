@@ -8,10 +8,10 @@ export type All_Actions = UPDATE_THEME;
 //
 export interface Users {
      name: string;
+     email: string;
     password: string;
-    email: string;
     age: number;
-    adult: boolean;
+    employee: boolean;
 }
 
 //
@@ -23,7 +23,29 @@ export interface State {
 //
 export const initialState: State = {
   theme: "light",
-  users: []
+  users: [
+    {
+      name: "Fran",
+      email: "fran@mail.com",
+      password: "fran123",
+      age: 22,
+      employee: true,
+    },
+    {
+      name: "María",
+      email: "maria@mail.com",
+      password: "maria123",
+      age: 25,
+      employee: true,
+    },
+    {
+      name: "Gigi",
+      email: "gigi@mail.com",
+      password: "gigi123",
+      age: 16,
+      employee: false,
+    },
+  ],
 };
 
 export interface MyState {
