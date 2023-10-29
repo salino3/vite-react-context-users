@@ -6,8 +6,8 @@ import * as classes from './add-user.styles';
 export const AddUserScene: React.FC = () => {
 
   return (
-    <div>
+    <classes.Div>
         <AddUser />
-    </div>
+    </classes.Div>
   )
 }
