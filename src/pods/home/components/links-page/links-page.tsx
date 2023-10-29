@@ -9,7 +9,7 @@ export const LinksPage: React.FC = () => {
       <h2 className={classes.titlePages}>Pages</h2>
       <div className={classes.boxLinks}>
         <Link to={SwitchRoutes?.addUser}>Add User</Link>
-        <Link to={SwitchRoutes?.addUser}>Show Users</Link>
+        <Link to={SwitchRoutes?.listUsers}>Show Users</Link>
       </div>
     </section>
   );
