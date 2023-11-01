@@ -6,5 +6,5 @@ export const container = css`
   flex-direction: column;
   margin: 50px 0px;
   gap: 10px;
-  width: 50%;
+  width: 30%;
 `;
