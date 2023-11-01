@@ -157,7 +157,7 @@ display: flex;
 `,Kv=et`
   color: gray;
   margin-bottom: 10px;
-`,Gv=()=>{const{state:e}=E.useContext(Hu);return console.log("State: ",e),T.jsxs(Qv,{children:[T.jsx(ad,{className:Kv,txt:"Consultancy ",span:"Los Boquerones"}),T.jsx(Hv,{})]})},Yv=Ce.div``,Xv=()=>T.jsx(Yv,{children:"add-user.component: React.FC"}),Zv=et`
+`,Gv=()=>{const{state:e}=E.useContext(Hu);return console.log("State: ",e),T.jsxs(Qv,{children:[T.jsx(ad,{className:Kv,txt:"Web page ",span:"Los Boquerones"}),T.jsx(Hv,{})]})},Yv=Ce.div``,Xv=()=>T.jsx(Yv,{children:"add-user.component: React.FC"}),Zv=et`
   display: flex;
   flex-direction: column;
   margin: 50px 0px;
