@@ -32,6 +32,18 @@ export const theme = {
   fulvousDarker: '#E67E00ff',
   cocoaBrown: '#DC6E00ff',
     },
+    reds: {
+chocolateCosmos: '#641220ff',
+burgundy: '#6e1423ff',
+burgundy2: '#85182aff',
+madder: '#a11d33ff',
+madder2: '#a71e34ff',
+redNcs: '#b21e35ff',
+redNcs2: '#bd1f36ff',
+cardinal: '#c71f37ff',
+crimson: '#da1e37ff',
+poppy: '#e01e37ff'
+    }
   },
   paddings: {
     paddingApp: "10px",

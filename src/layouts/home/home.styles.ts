@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/css";
+import { theme } from "@/themes";
 
 export const Main = styled.main`
- 
- height: 100vh;
+  padding: ${theme.paddings.paddingApp};
+
+  height: 100vh;
 `;

@@ -1,7 +1,20 @@
 import styled from "@emotion/styled";
 import { theme } from "./themes";
 
+
+
 export const Main = styled.main`
-  padding: ${theme.paddings.paddingApp};
-  background: ${theme.background.primary};
+  background: #c6ffdd; 
+  background: -webkit-linear-gradient(
+    to bottom,
+    #f7797d,
+    #fbd786,
+    #c6ffdd
+  );
+  background: linear-gradient(
+    to bottom,
+    #f7797d,
+    #fbd786,
+    #c6ffdd
+  ); 
 `;
