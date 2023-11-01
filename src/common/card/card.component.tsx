@@ -1,5 +1,6 @@
 import React from "react";
 import { Users } from "@/core";
+import { Button } from "../button";
 import * as classes from "./card.styles";
 
 export const Card: React.FC<Users> = (props) => {
@@ -23,6 +24,10 @@ export const Card: React.FC<Users> = (props) => {
         <span className={classes.keyName}>Employee:</span>
         <span className={classes.valueName}>{employee ? "Yes" : "No"}</span>
       </h3>
+      <div className={classes.boxBtns}>
+        <Button text={"Update"} myStyle={classes.btnUpdate} />
+        <Button text={"Delete"} myStyle={classes.btnDelete} />
+      </div>
     </div>
   );
 };

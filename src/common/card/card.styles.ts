@@ -37,3 +37,21 @@ display: flex;
 export const valueName = css`
   width: 100%;
 `;
+
+export const boxBtns = css`
+
+ display: flex;
+ flex-direction: row;
+ gap: 10px;
+`;
+
+export const btnUpdate = css`
+  color: ${theme.colors.blues.cerulean};
+  background: transparent;
+`;
+
+export const btnDelete = css`
+  color: ${theme.colors.reds.poppy};
+  background: transparent;
+`;
+   
