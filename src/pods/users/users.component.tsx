@@ -1,7 +1,6 @@
 import React from 'react';
-import { Title } from '@/common';
+import { Title, GoBack } from "@/common";
 import { List } from './components';
-import { GoBack } from '@/common/go-back';
 import * as classes from './users.styles';
 
 export const Users: React.FC = () => {

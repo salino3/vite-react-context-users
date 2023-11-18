@@ -1,9 +1,14 @@
 interface UPDATE_THEME {
   type: "UPDATE_THEME";
   payload: string;
-}
+};
 
-export type All_Actions = UPDATE_THEME;
+interface DELETE_USER {
+  type: "DELETE_USER";
+  payload: number | undefined;
+};
+
+export type All_Actions = UPDATE_THEME | DELETE_USER;
 
 //
 export interface Users {
@@ -13,13 +18,13 @@ export interface Users {
     password?: string;
     age?: number;
     employee?: boolean;
-}
+};
 
 //
 export interface State {
   theme: string;
   users: Users[]
-}
+};
 
 //
 export const initialState: State = {
@@ -56,4 +61,5 @@ export interface MyState {
   state: State;
   dispatch: React.Dispatch<All_Actions>;
   toggleTheme: () => void;
-}
+  deleteOne: (id: number | undefined) => void;
+};

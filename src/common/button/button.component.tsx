@@ -8,15 +8,16 @@ interface Props {
   divHeight?: number;
   btnHeight?: number;
   divWidth?: number;
-}
+  click?: React.MouseEventHandler<HTMLButtonElement> | undefined;
+};
 
 
 export const Button: React.FC<Props> = (props) => {
-  const { text, myStyle, btnHeight = 30, divHeight = 30, divWidth = 70 } = props;
+  const { text, myStyle, btnHeight = 30, divHeight = 30, divWidth = 70, click } = props;
 
   return (
     <div className={classes.container(divHeight, divWidth)}>
-      <button className={cx(classes.btn(btnHeight), `${myStyle}`)}>
+      <button onClick={click} className={cx(classes.btn(btnHeight), `${myStyle}`)}>
         {text}
       </button>
     </div>

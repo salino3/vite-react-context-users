@@ -1,10 +1,13 @@
-import React from "react";
-import { Users } from "@/core";
+import React, { useContext } from "react";
+import { GlobalContext, MyState, Users } from "@/core";
 import { Button } from "../button";
 import * as classes from "./card.styles";
 
 export const Card: React.FC<Users> = (props) => {
-  const { name, email, password, age, employee } = props;
+  const { name, email, age, employee, id } = props;
+
+  const {deleteOne} = useContext<MyState>(GlobalContext);
+
 
   return (
     <div className={classes?.container}>
@@ -26,7 +29,11 @@ export const Card: React.FC<Users> = (props) => {
       </h3>
       <div className={classes.boxBtns}>
         <Button text={"Update"} myStyle={classes.btnUpdate} />
-        <Button text={"Delete"} myStyle={classes.btnDelete} />
+        <Button
+          click={() => deleteOne(id)}
+          text={"Delete"}
+          myStyle={classes.btnDelete}
+        />
       </div>
     </div>
   );

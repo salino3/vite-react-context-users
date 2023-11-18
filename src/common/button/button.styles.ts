@@ -15,6 +15,7 @@ export const btn = (btnHeight: number) => css`
   padding: 3px;
   border-radius: 5px;
   height: ${btnHeight}px;
+  cursor: pointer;
 
   &:active {
     font-size: 15px;

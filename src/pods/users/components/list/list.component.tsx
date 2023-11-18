@@ -8,6 +8,7 @@ export const List: React.FC = () => {
     const {state} = useContext<MyState>(GlobalContext);
     const {users} = state;
 
+
   return (
     <div className={classes?.container}>
       {users &&
@@ -15,6 +16,7 @@ export const List: React.FC = () => {
           return ( 
               <Card
                 key={user?.id}
+                id={user?.id}
                 name={user?.name}
                 email={user?.email}
                 employee={user?.employee}
