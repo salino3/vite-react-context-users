@@ -4,6 +4,7 @@ import * as classes from "./button.styles";
 
 interface Props {
   text: string;
+  type?: "submit" | "button" | "reset" | undefined;
   myStyle?: string;
   divHeight?: number;
   btnHeight?: number;
@@ -13,11 +14,11 @@ interface Props {
 
 
 export const Button: React.FC<Props> = (props) => {
-  const { text, myStyle, btnHeight = 30, divHeight = 30, divWidth = 70, click } = props;
+  const { text, type, myStyle, btnHeight = 30, divHeight = 30, divWidth = 70, click } = props;
 
   return (
     <div className={classes.container(divHeight, divWidth)}>
-      <button onClick={click} className={cx(classes.btn(btnHeight), `${myStyle}`)}>
+      <button type={type} onClick={click} className={cx(classes.btn(btnHeight), `${myStyle}`)}>
         {text}
       </button>
     </div>

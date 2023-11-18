@@ -16,7 +16,7 @@ export interface Users {
      name?: string;
      email?: string;
     password?: string;
-    age?: number;
+    age?: number | null;
     employee?: boolean;
 };
 
