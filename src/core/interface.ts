@@ -7,6 +7,7 @@ export type All_Actions = UPDATE_THEME;
 
 //
 export interface Users {
+     id?: number;
      name?: string;
      email?: string;
     password?: string;
@@ -25,6 +26,7 @@ export const initialState: State = {
   theme: "light",
   users: [
     {
+      id: 1,
       name: "Fran",
       email: "fran@mail.com",
       password: "fran123",
@@ -32,6 +34,7 @@ export const initialState: State = {
       employee: true,
     },
     {
+      id: 2,
       name: "María",
       email: "maria@mail.com",
       password: "maria123",
@@ -39,6 +42,7 @@ export const initialState: State = {
       employee: true,
     },
     {
+      id: 3,
       name: "Gigi",
       email: "gigi@mail.com",
       password: "gigi123",

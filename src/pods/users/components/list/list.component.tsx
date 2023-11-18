@@ -14,6 +14,7 @@ export const List: React.FC = () => {
         users.map((user: Users) => {
           return ( 
               <Card
+                key={user?.id}
                 name={user?.name}
                 email={user?.email}
                 employee={user?.employee}
