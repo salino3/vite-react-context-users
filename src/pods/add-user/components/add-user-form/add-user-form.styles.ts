@@ -1,3 +1,4 @@
+import { theme } from '@/themes';
 import {css} from '@emotion/css';
 
 
@@ -30,5 +31,16 @@ export const boxInputCheck = css`
       width: 20px;
       height: 20px;
   }
-
 `;
+
+
+export const btnSubmit = css`
+  margin-top: 20px;
+  background-color: ${theme.colors.blues.bondiBlue};
+  border: none;
+  padding: 0px 8px;
+  color: #eadeda;
+`;
+
+
+

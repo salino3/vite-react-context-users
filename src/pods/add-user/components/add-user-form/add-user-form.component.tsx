@@ -74,7 +74,7 @@ export const AddUserForm: React.FC = () => {
         name="employee"
         handleChange={handleChange("employee")}
       />
-      <Button text="Send" type="submit" />
+      <Button myStyle={classes.btnSubmit} text="Send" type="submit" />
     </form>
   );
 }
