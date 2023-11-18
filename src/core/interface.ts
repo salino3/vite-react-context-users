@@ -1,30 +1,37 @@
 interface UPDATE_THEME {
   type: "UPDATE_THEME";
   payload: string;
-}
+};
 
-export type All_Actions = UPDATE_THEME;
+interface DELETE_USER {
+  type: "DELETE_USER";
+  payload: number | undefined;
+};
+
+export type All_Actions = UPDATE_THEME | DELETE_USER;
 
 //
 export interface Users {
+     id?: number;
      name?: string;
      email?: string;
     password?: string;
     age?: number;
     employee?: boolean;
-}
+};
 
 //
 export interface State {
   theme: string;
   users: Users[]
-}
+};
 
 //
 export const initialState: State = {
   theme: "light",
   users: [
     {
+      id: 1,
       name: "Fran",
       email: "fran@mail.com",
       password: "fran123",
@@ -32,6 +39,7 @@ export const initialState: State = {
       employee: true,
     },
     {
+      id: 2,
       name: "María",
       email: "maria@mail.com",
       password: "maria123",
@@ -39,6 +47,7 @@ export const initialState: State = {
       employee: true,
     },
     {
+      id: 3,
       name: "Gigi",
       email: "gigi@mail.com",
       password: "gigi123",
@@ -52,4 +61,5 @@ export interface MyState {
   state: State;
   dispatch: React.Dispatch<All_Actions>;
   toggleTheme: () => void;
-}
+  deleteOne: (id: number | undefined) => void;
+};

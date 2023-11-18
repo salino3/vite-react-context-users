@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title } from '@/common';
+import { Title, GoBack } from "@/common";
 import { List } from './components';
 import * as classes from './users.styles';
 
@@ -11,6 +11,7 @@ export const Users: React.FC = () => {
         txt={`User `}
         span="List"
       />
+      <GoBack text='Go back' />
       <List />
     </classes.Div>
   );
