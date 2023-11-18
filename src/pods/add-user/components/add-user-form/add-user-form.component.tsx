@@ -34,8 +34,9 @@ export const AddUserForm: React.FC = () => {
    };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={classes.container} onSubmit={handleSubmit}>
       <BoxInput
+        styles={classes.boxInput}
         type="text"
         required
         value={user?.name}
@@ -43,6 +44,7 @@ export const AddUserForm: React.FC = () => {
         handleChange={handleChange("name")}
       />
       <BoxInput
+        styles={classes.boxInput}
         type="email"
         required
         value={user?.email}
@@ -50,6 +52,7 @@ export const AddUserForm: React.FC = () => {
         handleChange={handleChange("email")}
       />
       <BoxInput
+        styles={classes.boxInput}
         type="password"
         required
         value={user?.password}
@@ -57,6 +60,7 @@ export const AddUserForm: React.FC = () => {
         handleChange={handleChange("password")}
       />
       <BoxInput
+        styles={classes.boxInput}
         type="number"
         required
         value={user?.age || ""}
@@ -64,6 +68,7 @@ export const AddUserForm: React.FC = () => {
         handleChange={handleChange("age")}
       />
       <BoxInput
+        styles={classes.boxInputCheck}
         type="checkbox"
         check={user?.employee}
         name="employee"
