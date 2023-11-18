@@ -5,5 +5,19 @@ import { theme } from '@/themes';
 export const Main = styled.main`
   padding: ${theme.paddings.paddingApp};
   height: 100vh;
+
+  background: #40e0d0; 
+  background: -webkit-linear-gradient(
+    to bottom,
+    #40e0d0,
+    #ff8c00,
+    #ff0080
+  ); 
+  background: linear-gradient(
+    to bottom,
+    #40e0d0,
+    #ff8c00,
+    #ff0080
+  ); 
 `;
 
