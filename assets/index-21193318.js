@@ -209,7 +209,7 @@ display: flex;
 `,lv=Z`
   color: gray;
   margin-bottom: 10px;
-`,iv=()=>{const{state:e}=ot.useContext(zr);return console.log("State: ",e),E.jsxs(rv,{children:[E.jsx(pd,{className:lv,txt:"Web page ",span:"Los Boquerones"}),E.jsx(nv,{})]})},ov=Z`
+`,iv=()=>{const{state:e}=ot.useContext(zr);return console.log("State: ",e),E.jsxs(rv,{children:[E.jsx(pd,{className:lv,txt:"Web ",span:"Los Boquerones"}),E.jsx(nv,{})]})},ov=Z`
 
  display: flex;
  flex-direction: column;
