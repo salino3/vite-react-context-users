@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { GlobalContext, MyReducer, initialState } from '.';
+import { GlobalContext, MyReducer, Users, initialState } from '.';
 
 interface Props {
   children: JSX.Element | JSX.Element[];
@@ -17,6 +17,14 @@ export const MyProvider: React.FC<Props> = ({children}) => {
    });
  }, [dispatch, state.theme]);
 
+
+ const updateID = useCallback(() => {
+   dispatch({
+     type: "NEW_ID",
+     payload: state.newID + 1,
+   });
+ }, [dispatch, , state.newID]);
+
  const deleteOne = useCallback(
    (id: number | undefined) => {
      dispatch({
@@ -26,9 +34,22 @@ export const MyProvider: React.FC<Props> = ({children}) => {
    },
    [dispatch]
  );
+ 
+  const addOne = useCallback(
+    (user: Users) => {
+      dispatch({
+        type: "ADD_USER",
+        payload: user,
+      });
+    },
+    [dispatch]
+  );
+
 
   return (
-    <GlobalContext.Provider value={{ state, dispatch, toggleTheme, deleteOne }}>
+    <GlobalContext.Provider
+      value={{ state, dispatch, toggleTheme, deleteOne, addOne, updateID }}
+    >
       <div id={state.theme}>{children}</div>
     </GlobalContext.Provider>
   );

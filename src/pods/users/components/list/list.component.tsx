@@ -11,7 +11,7 @@ export const List: React.FC = () => {
 
   return (
     <div className={classes?.container}>
-      {users &&
+      {!users || users.length < 1 ? <h2>There is no one in the list...</h2> :
         users.map((user: Users) => {
           return ( 
               <Card

@@ -5,10 +5,12 @@ import * as classes from './add-user-form.styles';
 
 export const AddUserForm: React.FC = () => {
 
-  const {state} = React.useContext<MyState>(GlobalContext);
-  const {users} = state;
+  const { addOne, state, updateID } = React.useContext<MyState>(GlobalContext);
+  const { newID } = state;
 
+  
   const [user, setUser] = React.useState<Users>({
+     id: newID,
      name: '',
      email: '',
      password: '',
@@ -26,12 +28,21 @@ export const AddUserForm: React.FC = () => {
         setUser({ ...user, [key]: event.target.checked });
       };
    };
+   
 
  const handleSubmit: React.FormEventHandler<HTMLFormElement> | undefined = (
    event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-     console.log("User", user)
+    
+    addOne(user)
+    console.log("User", user);
+    updateID();
    };
+
+     React.useEffect(() => {
+       setUser((prevUser) => ({ ...prevUser, id: newID }));
+     }, [newID]);
+
 
   return (
     <form className={classes.container} onSubmit={handleSubmit}>
@@ -76,7 +87,7 @@ export const AddUserForm: React.FC = () => {
           handleChange={handleChange("employee")}
         />
       </div>
-      <Button myStyle={classes.btnSubmit} text="Send" type="submit" />
+       <Button myStyle={classes.btnSubmit} text="Send" type="submit" />
     </form>
   );
 }

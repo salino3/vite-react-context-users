@@ -41,6 +41,7 @@ export const boxInput = css`
   input {
     width: auto;
     max-width: ${theme.spacing(50)};
+    padding: 2px;
     padding-left: 3px;
     border-radius: 5px;
   }
@@ -57,6 +58,7 @@ export const boxInputCheck = css`
   width: 100%;
   align-self: flex-start;
   color: ${theme.colors.blues.keppel};
+  margin-bottom: ${theme.spacing(5)};
 
   gap: ${theme.spacing(5)};
   margin-top: ${theme.spacing(2.5)};
@@ -69,9 +71,7 @@ export const boxInputCheck = css`
   }
 `;
 
-
 export const btnSubmit = css`
-  margin-top: ${theme.spacing(5)};
   background-color: ${theme.colors.blues.bondiBlue};
   border: none;
   padding: 0px ${theme.spacing(2)};
