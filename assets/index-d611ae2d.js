@@ -121,13 +121,15 @@ Error generating stack: `+i.message+`
   align-items: center;
   border: groove 5px ${M.colors.reds.poppy};
   border-radius: 20px 100px;
-  padding: 10px 5px;
+  padding: 10px 20px;
   color: ${M.colors.blues.indigoDye};
   background: #1a2a6c;
   background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);
   background: linear-gradient(to right, #fdbb2d, ${M.background.primary});
   font-weight: bold;
-
+  min-width: 300px;
+  width: auto;
+ 
 `,qr=Z`
   
   display: flex;
@@ -262,6 +264,8 @@ display: flex;
 `,fv=()=>E.jsx(cv,{children:E.jsx(sv,{})}),dv=Z`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 50px 0px;
   gap: 10px;
   width: 30%;
