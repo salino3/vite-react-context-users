@@ -1,25 +1,23 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/css";
+import { theme } from "@/themes";
 
 export const Div = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-items: center;
   align-items: center;
-  min-width: 100%;
-  height: 500px;
-  width: 1200px;
-  border-radius: 50% 20px;
-
-  background: #355c7d; 
-  background: -webkit-linear-gradient(
-    to top,
-    #c06c84,
-    #6c5b7b,
-    #355c7d
-  ); 
-  background: linear-gradient(to top, #c06c84, #6c5b7b, #355c7d);
-
-  background-size: 100% 135%; 
-  background-position: center bottom;
-
+  height: 100%;
+    gap: 20px;
+  
 `;
+
+export const title = css`
+  text-align: center;
+  height: min-content;
+  min-width: 200px;
+  width: min-content;
+  color: ${theme.colors.reds.burgundy};
+  margin: 30px 0px 20px 0px;
+`;
+

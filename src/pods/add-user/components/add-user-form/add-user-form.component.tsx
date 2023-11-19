@@ -39,7 +39,7 @@ export const AddUserForm: React.FC = () => {
         styles={classes.boxInput}
         type="text"
         required
-        value={user?.name}
+        value={user?.name || ""}
         name="name"
         handleChange={handleChange("name")}
       />
@@ -47,7 +47,7 @@ export const AddUserForm: React.FC = () => {
         styles={classes.boxInput}
         type="email"
         required
-        value={user?.email}
+        value={user?.email || ""}
         name="email"
         handleChange={handleChange("email")}
       />
@@ -55,7 +55,7 @@ export const AddUserForm: React.FC = () => {
         styles={classes.boxInput}
         type="password"
         required
-        value={user?.password}
+        value={user?.password || ""}
         name="password"
         handleChange={handleChange("password")}
       />
@@ -67,13 +67,15 @@ export const AddUserForm: React.FC = () => {
         name="age"
         handleChange={handleChange("age")}
       />
-      <BoxInput
-        styles={classes.boxInputCheck}
-        type="checkbox"
-        check={user?.employee}
-        name="employee"
-        handleChange={handleChange("employee")}
-      />
+      <div className={classes.boxCheckBox}>
+        <BoxInput
+          styles={classes.boxInputCheck}
+          type="checkbox"
+          check={user?.employee}
+          name="employee"
+          handleChange={handleChange("employee")}
+        />
+      </div>
       <Button myStyle={classes.btnSubmit} text="Send" type="submit" />
     </form>
   );

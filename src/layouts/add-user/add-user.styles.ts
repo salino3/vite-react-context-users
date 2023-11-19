@@ -8,6 +8,7 @@ export const Main = styled.main`
   align-items: center;
   overflow-y: auto;
   overflow: hidden;
+  
   padding: ${theme.paddings.paddingApp};
   min-height: 100%;
   height: 100vh;

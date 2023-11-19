@@ -11,7 +11,7 @@ export const HomeComponent: React.FC = () => {
 
   return (
     <classes.Div>
-      <Title className={classes.title} txt={`Web page `} span="Los Boquerones" />
+      <Title className={classes.title} txt={`Web `} span="Los Boquerones" />
       <LinksPage />
     </classes.Div>
   );
