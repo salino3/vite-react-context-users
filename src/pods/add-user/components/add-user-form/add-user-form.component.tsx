@@ -1,12 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { GlobalContext, MyState, Users } from '@/core';
 import { BoxInput, Button } from '@/common';
 import * as classes from './add-user-form.styles';
+import { SwitchRoutes } from '@/routes';
 
 export const AddUserForm: React.FC = () => {
 
   const { addOne, state, updateID } = React.useContext<MyState>(GlobalContext);
   const { newID } = state;
+
+  const navigate = useNavigate();
 
   
   const [user, setUser] = React.useState<Users>({
@@ -37,6 +41,7 @@ export const AddUserForm: React.FC = () => {
     addOne(user)
     console.log("User", user);
     updateID();
+    navigate(`${SwitchRoutes.listUsers}`);
    };
 
      React.useEffect(() => {

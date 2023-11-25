@@ -8,7 +8,7 @@ export const Div = styled.div`
   justify-items: center;
   align-items: center;
   height: 100%;
-    gap: 20px;
+  gap: 20px;
   
 `;
 
