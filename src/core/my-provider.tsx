@@ -34,6 +34,16 @@ export const MyProvider: React.FC<Props> = ({children}) => {
    },
    [dispatch]
  );
+
+  const updateUser = useCallback(
+    (user: Users) => {
+      dispatch({
+        type: "UPDATE_USER",
+        payload: user,
+      });
+    },
+    [dispatch]
+  );
  
   const addOne = useCallback(
     (user: Users) => {
@@ -48,7 +58,15 @@ export const MyProvider: React.FC<Props> = ({children}) => {
 
   return (
     <GlobalContext.Provider
-      value={{ state, dispatch, toggleTheme, deleteOne, addOne, updateID }}
+      value={{
+        state,
+        dispatch,
+        toggleTheme,
+        deleteOne,
+        addOne,
+        updateID,
+        updateUser,
+      }}
     >
       <div id={state.theme}>{children}</div>
     </GlobalContext.Provider>

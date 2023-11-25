@@ -13,7 +13,7 @@ export const Div = styled.div`
 export const title = css`
   text-align: center;
   height: min-content;
-  min-width: 200px;
+  min-width: ${theme.spacing(50)};
   width: min-content;
   color: ${theme.colors.reds.burgundy};
   margin: 30px 0px;

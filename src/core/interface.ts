@@ -13,21 +13,26 @@ interface DELETE_USER {
   payload: number | undefined;
 };
 
+interface UPDATE_USER {
+  type: "UPDATE_USER";
+  payload: Users;
+};
+
 interface ADD_USER {
   type: "ADD_USER";
   payload: Users;
 };
 
-export type All_Actions = UPDATE_THEME | DELETE_USER | ADD_USER | NEW_ID;
+export type All_Actions = UPDATE_THEME | DELETE_USER | ADD_USER | UPDATE_USER | NEW_ID;
 
 //
 export interface Users {
      id?: number;
      name?: string;
      email?: string;
-    password?: string;
-    age?: number | null;
-    employee?: boolean;
+     password?: string;
+     age?: number | null;
+     employee?: boolean;
 };
 
 //
@@ -76,4 +81,5 @@ export interface MyState {
   updateID: () => void;
   deleteOne: (id: number | undefined) => void;
   addOne: (user: Users) => void;
+  updateUser: (user: Users) => void;
 };

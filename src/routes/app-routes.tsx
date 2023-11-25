@@ -11,7 +11,7 @@ export const AppRoutes: React.FC = () => {
         <Route path={SwitchRoutes?.root} element={<HomeLayout />} />
         <Route path={SwitchRoutes?.addUser} element={<AddUserLayout />} />
         <Route path={SwitchRoutes?.listUsers} element={<UsersLayout />} />
-        <Route path={SwitchRoutes?.updateUser} element={<UpdateUserLayout />} />
+        <Route path={`${SwitchRoutes?.updateUser}/:id`} element={<UpdateUserLayout />} />
       </Routes>
     </>
   );
