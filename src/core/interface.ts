@@ -3,12 +3,22 @@ interface UPDATE_THEME {
   payload: string;
 };
 
+interface NEW_ID {
+  type: "NEW_ID";
+  payload: number;
+};
+
 interface DELETE_USER {
   type: "DELETE_USER";
   payload: number | undefined;
 };
 
-export type All_Actions = UPDATE_THEME | DELETE_USER;
+interface ADD_USER {
+  type: "ADD_USER";
+  payload: Users;
+};
+
+export type All_Actions = UPDATE_THEME | DELETE_USER | ADD_USER | NEW_ID;
 
 //
 export interface Users {
@@ -16,19 +26,21 @@ export interface Users {
      name?: string;
      email?: string;
     password?: string;
-    age?: number;
+    age?: number | null;
     employee?: boolean;
 };
 
 //
 export interface State {
   theme: string;
-  users: Users[]
+  newID: number;
+  users: Users[];
 };
 
 //
 export const initialState: State = {
   theme: "light",
+  newID: 4,
   users: [
     {
       id: 1,
@@ -61,5 +73,7 @@ export interface MyState {
   state: State;
   dispatch: React.Dispatch<All_Actions>;
   toggleTheme: () => void;
+  updateID: () => void;
   deleteOne: (id: number | undefined) => void;
+  addOne: (user: Users) => void;
 };

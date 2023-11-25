@@ -4,7 +4,8 @@ import { theme } from "@/themes";
 
 export const Main = styled.main`
   padding: ${theme.paddings.paddingApp};
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   
   background: #544a7d;
   background: -webkit-linear-gradient(

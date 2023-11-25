@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { GlobalContext, MyState, Users } from "@/core";
 import { Button } from "../button";
 import * as classes from "./card.styles";
@@ -6,7 +6,7 @@ import * as classes from "./card.styles";
 export const Card: React.FC<Users> = (props) => {
   const { name, email, age, employee, id } = props;
 
-  const {deleteOne} = useContext<MyState>(GlobalContext);
+  const {deleteOne} = React.useContext<MyState>(GlobalContext);
 
 
   return (

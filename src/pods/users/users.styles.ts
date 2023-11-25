@@ -3,10 +3,10 @@ import { css } from "@emotion/css";
 import { theme } from "@/themes";
 
 export const Div = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
   
   `;
 

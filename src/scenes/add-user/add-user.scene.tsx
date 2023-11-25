@@ -7,7 +7,7 @@ export const AddUserScene: React.FC = () => {
 
   return (
     <classes.Div>
-        <AddUser />
+      <AddUser />
     </classes.Div>
-  )
+  );
 }
