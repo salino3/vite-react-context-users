@@ -9,7 +9,7 @@ export const AddUser: React.FC = () => {
 
   return (
     <classes.Div>
-      <Title className={classes.title} txt={`User `} span="List" />
+      <Title className={classes.title} txt={`User `} span="Form" />
       <div className={classes.boxLinks}>
       <GoBack text="Go Back" />
       <GoBack pageTxt={SwitchRoutes?.listUsers} text="Go to list" />

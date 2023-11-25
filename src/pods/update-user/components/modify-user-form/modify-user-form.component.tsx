@@ -1,52 +1,42 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { GlobalContext, MyState, Users } from '@/core';
-import { BoxInput, Button } from '@/common';
-import { SwitchRoutes } from '@/routes';
-import * as classes from './add-user-form.styles';
+import React from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { GlobalContext, MyState, Users } from "@/core";
+import { BoxInput, Button } from "@/common";
+import { SwitchRoutes } from "@/routes";
+import * as classes from "./modify-user-from.styles";
 
-export const AddUserForm: React.FC = () => {
 
-  const { addOne, state, updateID } = React.useContext<MyState>(GlobalContext);
-  const { newID } = state;
+export const ModifyUserForm: React.FC = () => {
+  const { updateUser, state } = React.useContext<MyState>(GlobalContext);
 
   const navigate = useNavigate();
+  const params = useParams();
 
-  
-  const [user, setUser] = React.useState<Users>({
-     id: newID,
-     name: '',
-     email: '',
-     password: '',
-     age: null,
-     employee: false
-  });
+  const oneUser = state?.users.filter(
+    (user: Users) => user?.id === Number(params.id)
+  )[0];
 
-  const handleChange =
-    (key: keyof Users) =>
-      (event: React.ChangeEvent<HTMLInputElement>) => {
-         const {target} = event;
-        if(target.value){
+  const [user, setUser] = React.useState<Users>(oneUser);
+console.log(user)
+
+  const handleChange = (key: keyof Users) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      const { target } = event;
+      if (target.value) {
         setUser({ ...user, [key]: event.target.value });
-      }else{
+      } else {
         setUser({ ...user, [key]: event.target.checked });
-      };
-   };
-   
+      }
+    };
 
- const handleSubmit: React.FormEventHandler<HTMLFormElement> | undefined = (
-   event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    
-    addOne(user)
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> | undefined = (
+    event: React.FormEvent<HTMLFormElement>
+     ) => {event.preventDefault();
+
+    updateUser(user);
     console.log("User", user);
-    updateID();
     navigate(`${SwitchRoutes.listUsers}`);
-   };
+  };
 
-     React.useEffect(() => {
-       setUser((prevUser) => ({ ...prevUser, id: newID }));
-     }, [newID]);
 
 
   return (
@@ -92,7 +82,7 @@ export const AddUserForm: React.FC = () => {
           handleChange={handleChange("employee")}
         />
       </div>
-       <Button myStyle={classes.btnSubmit} text="Send" type="submit" />
+      <Button myStyle={classes.btnSubmit} text="Send" type="submit" />
     </form>
   );
-}
+};

@@ -1,12 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { GlobalContext, MyState, Users } from "@/core";
 import { Button } from "../button";
 import * as classes from "./card.styles";
+import { SwitchRoutes } from "@/routes";
 
 export const Card: React.FC<Users> = (props) => {
   const { name, email, age, employee, id } = props;
 
   const {deleteOne} = React.useContext<MyState>(GlobalContext);
+
+  const navigate = useNavigate();
 
 
   return (
@@ -28,7 +32,11 @@ export const Card: React.FC<Users> = (props) => {
         <span className={classes.valueName}>{employee ? "Yes" : "No"}</span>
       </h3>
       <div className={classes.boxBtns}>
-        <Button text={"Update"} myStyle={classes.btnUpdate} />
+        <Button
+          click={() => navigate(`${SwitchRoutes.updateUser}/${id}`)}
+          text={"Update"}
+          myStyle={classes.btnUpdate}
+        />
         <Button
           click={() => deleteOne(id)}
           text={"Delete"}

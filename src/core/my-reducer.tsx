@@ -25,7 +25,15 @@ export const MyReducer = (state: State, action: All_Actions) => {
     case "ADD_USER":
       return {
         ...state,
-        users: [action.payload, ...state.users], 
+        users: [action.payload, ...state.users],
+      };
+
+    case "UPDATE_USER":
+      return {
+        ...state,
+        users: state.users.map((user: Users) =>
+          user.id === action.payload.id ? action.payload : user
+        ),
       };
 
     default:
