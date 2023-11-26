@@ -14,7 +14,15 @@ export const Main = styled.main`
   min-height: 100%;
   height: 100vh;
 
-  background: #40e0d0;
-  background: -webkit-linear-gradient(to bottom, #40e0d0, #ff8c00, #ff0080);
-  background: linear-gradient(to bottom, #40e0d0, #ff8c00, #ff0080);
+  background: #ee0979; 
+  background: -webkit-linear-gradient(
+    to right,
+    #ff6a00,
+    #ee0979
+  ); 
+  background: linear-gradient(
+    to right,
+    #ff6a00,
+    #ee0979
+  ); 
 `;

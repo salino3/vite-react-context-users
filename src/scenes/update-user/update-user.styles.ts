@@ -13,7 +13,4 @@ export const Div = styled.div`
   overflow: hidden;
   padding: 0px 20%;
 
-  /* @media (min-width: 1000px) {
-    align-items: center;
-  } */
 `;
