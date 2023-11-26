@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { GlobalContext, MyState, Users } from "@/core";
 import { BoxInput, Button } from "@/common";
 import { SwitchRoutes } from "@/routes";
-import * as classes from "./modify-user-from.styles";
+import * as classes from "./modify-user-form.styles";
 
 
 export const ModifyUserForm: React.FC = () => {
