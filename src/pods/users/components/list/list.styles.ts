@@ -10,6 +10,7 @@ export const container = css`
   margin: 50px 0px;
   gap: 10px;
   width: 30%;
+  
 
   h2 {
     color: ${theme.colors.blues.indigoDye};

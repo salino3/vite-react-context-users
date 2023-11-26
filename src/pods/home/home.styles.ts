@@ -8,6 +8,7 @@ export const Div = styled.div`
   align-items: center;
   padding: ${theme.spacing(2)};
   height: 100%;
+  margin-top: 70px;
 `;
 
 export const title = css`

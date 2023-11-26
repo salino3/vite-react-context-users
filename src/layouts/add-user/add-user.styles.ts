@@ -4,8 +4,9 @@ import { theme } from '@/themes';
 
 export const Main = styled.main`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  
   overflow-y: auto;
   overflow: hidden;
   

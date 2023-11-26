@@ -9,6 +9,7 @@ export const root = css`
   justify-content: center;
   align-items: center;
   gap: ${theme.spacing(5)};
+  margin-top: 70px;
 
 `;
 
