@@ -13,9 +13,14 @@ export const NavBar: React.FC = () => {
           <Link to={SwitchRoutes.addUser}>Add User</Link>
           <Link to={SwitchRoutes.listUsers}>Users List</Link>
         </nav>
-        <nav>
-          <div> Dark Mode</div>
-          <div> colorful Mode</div>
+        <nav className={classes.navbarFuncionalities}>
+          <div className={classes.itemA}> Dark Mode</div>
+          <div className={classes.itemB}> colorful Mode</div>
+          <div className={classes.boxLanguages}>
+            <div className={classes.itemC}>English</div>
+            <div className={classes.itemD}>Spanish</div>
+            <div className={classes.itemE}>Italian</div>
+          </div>
         </nav>
       </header>
     );
