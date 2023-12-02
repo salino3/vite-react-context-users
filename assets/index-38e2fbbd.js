@@ -159,12 +159,20 @@ display: flex;
   justify-self: center;
   margin-top: 10px;
   font-family: cursive;
-`,s0=$`
 
- display: flex;
- justify-content: center;
- align-items: center;
- color: ${N.colors.blues.lapisLazuli}
+  @media (max-width: 420px) {
+    grid-template-columns: 70% 30%;
+
+  }
+`,s0=$`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${N.colors.blues.lapisLazuli};
+  
+  @media (max-width: 420px) {
+   display: none
+  }
 `,a0=$`
   display: grid;
   grid-template-rows: 1fr;
