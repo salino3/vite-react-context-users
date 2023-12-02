@@ -39,7 +39,7 @@ export const navbarFuncionalities = css`
   justify-content: space-around; 
   align-items: center;
   grid-template-areas:
-    ". itemA  itemB ."
+    ". itemA . ."
     " box box box box";
 `;
 
@@ -67,8 +67,6 @@ export const itemC = css`
 export const itemD = css`
 `;
 
-export const itemE = css`
-`;
 
 
 

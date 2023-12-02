@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import * as classes from './navbar.styles';
 import { SwitchRoutes } from '@/routes';
+import { SwitcherMode } from '../switcher-mode';
 
 export const NavBar: React.FC = () => {
 
@@ -14,12 +15,12 @@ export const NavBar: React.FC = () => {
           <Link to={SwitchRoutes.listUsers}>Users List</Link>
         </nav>
         <nav className={classes.navbarFuncionalities}>
-          <div className={classes.itemA}> Dark Mode</div>
-          <div className={classes.itemB}> colorful Mode</div>
+          <div className={classes.itemA}><SwitcherMode /></div>
+       
           <div className={classes.boxLanguages}>
-            <div className={classes.itemC}>English</div>
-            <div className={classes.itemD}>Spanish</div>
-            <div className={classes.itemE}>Italian</div>
+            <div className={classes.itemB}>English</div>
+            <div className={classes.itemC}>Spanish</div>
+            <div className={classes.itemD}>Italian</div>
           </div>
         </nav>
       </header>
