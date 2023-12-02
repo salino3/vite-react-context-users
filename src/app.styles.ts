@@ -1,6 +1,4 @@
-import { css } from "@emotion/css";
 import styled from "@emotion/styled";
-
 
 export const Main = styled.main`
   ${(props) => (props.id === "light" ? lightStyles : "")};

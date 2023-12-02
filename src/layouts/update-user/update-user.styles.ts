@@ -13,8 +13,10 @@ export const Main = styled.main`
   padding: ${theme.paddings.paddingApp};
   min-height: 100%;
   height: 100vh;
+  ${(props) => (props.id === "light" ? lightStyles : "")};
+`;
 
+const lightStyles = `
   background: #ee0979;
   background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
-  background: linear-gradient(to right, #ff6a00, #ee0979);
-`;
+  background: linear-gradient(to right, #ff6a00, #ee0979);`;
