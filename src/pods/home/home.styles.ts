@@ -6,8 +6,9 @@ export const Div = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: ${theme.spacing(2)};
+  padding: ${theme.spacing(12)};
   height: 100%;
+  margin-top: 70px;
 `;
 
 export const title = css`

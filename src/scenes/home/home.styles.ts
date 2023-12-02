@@ -3,8 +3,13 @@ import { css } from "@emotion/css";
 
 
 export const Div = styled.div`
- 
- height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+
+  height: 100%;
 `;
 
 

@@ -23,10 +23,10 @@ export const titlePages = css`
 export const boxLinks = css`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 20px;
   font-weight: 600;
   min-width: 200px;
-  padding: ${theme?.spacing(2)} ${theme?.spacing(5)};
+  padding: ${theme?.spacing(3)} ${theme?.spacing(5)};
   border: solid ${theme?.colors?.blues?.keppel} ${theme?.spacing(1)};
   border-radius: 12px;
 

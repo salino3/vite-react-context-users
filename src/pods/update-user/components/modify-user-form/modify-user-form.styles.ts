@@ -15,9 +15,18 @@ export const container = css`
   width: 350px;
   margin-top: 5px;
 
-  background: #355c7d;
-  background: -webkit-linear-gradient(to top, #c06c84, #6c5b7b, #355c7d);
-  background: linear-gradient(to top, #c06c84, #6c5b7b, #355c7d);
+  background: #4ecdc4;
+  background: -webkit-linear-gradient(
+    to right,
+    #556270,
+    #4ecdc4
+  ); 
+  background: linear-gradient(
+    to right,
+    #556270,
+    #4ecdc4,
+    #ffbf00
+  ); 
 
   background-size: 100% 135%;
   background-position: center bottom;

@@ -9,7 +9,7 @@ export const Div = styled.div`
   align-items: center;
   height: 100%;
   gap: 20px;
-  
+  margin-top: 70px;
 `;
 
 export const title = css`

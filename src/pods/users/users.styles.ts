@@ -7,8 +7,8 @@ export const Div = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100%;
-  
-  `;
+  margin-top: 70px;
+`;
 
 export const title = css`
   text-align: center;

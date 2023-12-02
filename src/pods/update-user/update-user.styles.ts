@@ -4,12 +4,13 @@ import { theme } from "@/themes";
 
 
 export const root = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: ${theme.spacing(5)};
+  margin-top: 70px;
 
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: ${theme.spacing(5)};
 `;
 
 export const title = css`
