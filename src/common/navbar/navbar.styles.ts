@@ -13,14 +13,22 @@ export const root = css`
   justify-self: center;
   margin-top: 10px;
   font-family: cursive;
+
+  @media (max-width: 420px) {
+    grid-template-columns: 70% 30%;
+
+  }
 `;
 
 export const titleNav = css`
-
- display: flex;
- justify-content: center;
- align-items: center;
- color: ${theme.colors.blues.lapisLazuli}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${theme.colors.blues.lapisLazuli};
+  
+  @media (max-width: 420px) {
+   display: none
+  }
 `;
 
 export const navbarLinks = css`
