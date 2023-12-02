@@ -12,7 +12,7 @@ export const SwitcherMode: React.FC = () => {
   return (
     <section className={classes.switchMode}>
       <label htmlFor="switcher">
-        {theme === "light" ? "Light Mode" : "Dark mode"}
+        {theme === "light" ? "Colorful Mode" : "Dark mode"}
       </label>
       <ReactSwitch
         name="switcher"
