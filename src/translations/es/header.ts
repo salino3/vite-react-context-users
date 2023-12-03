@@ -1,3 +1,5 @@
 export const header = {
-    home: "Inicio",
+  home: "inicio",
+  addUser: "añade usuario",
+  userList: "lista usuarios",
 };
