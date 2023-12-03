@@ -1,4 +1,5 @@
 export const layout = {
-  home: "inicio",
-  addUser: "añade usuario",
+  pages: "páginas",
+  addUser: "Añade usuario",
+  showUsers: "muestra usuarios",
 };

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { GlobalContext, MyState } from '@/core';
 import { SwitchRoutes } from '@/routes';
+import {wordsPage} from '@/translations';
 import { SwitcherMode } from '../switcher-mode';
 import * as classes from './navbar.styles';
 
@@ -11,6 +12,7 @@ export const NavBar: React.FC = () => {
   const {capitalizing} = React.useContext<MyState>(GlobalContext);
 
     const [t, i18n] = useTranslation("global");
+    const { header } = wordsPage;
 
     const changeLanguage = (language: string) => {
       i18n.changeLanguage(language);
@@ -21,9 +23,13 @@ export const NavBar: React.FC = () => {
       <header className={classes.root}>
         <h3 className={classes.titleNav}>Los Boquerones</h3>
         <nav className={classes.navbarLinks}>
-          <Link to={SwitchRoutes.root}>{capitalizing(t("header.home"))}</Link>
-          <Link to={SwitchRoutes.addUser}>{capitalizing(t("header.addUser"))}</Link>
-          <Link to={SwitchRoutes.listUsers}>{capitalizing(t("header.usersList"))}</Link>
+          <Link to={SwitchRoutes.root}>{capitalizing(t(header.home))}</Link>
+          <Link to={SwitchRoutes.addUser}>
+            {capitalizing(t(header.addUser))}
+          </Link>
+          <Link to={SwitchRoutes.listUsers}>
+            {capitalizing(t(header.usersList))}
+          </Link>
         </nav>
         <nav className={classes.navbarFuncionalities}>
           <div className={classes.itemA}>
