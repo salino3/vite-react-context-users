@@ -5,13 +5,13 @@ interface Word {
 interface Word {
   home: string;
   addUser: string;
-  userList: string;
+  usersList: string;
 };
 
 export const header: Word = {
   home: "home",
   addUser: "add User",
-  userList: "users list",
+  usersList: "users list",
 };
 
 

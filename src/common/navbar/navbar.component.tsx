@@ -5,7 +5,6 @@ import { GlobalContext, MyState } from '@/core';
 import { SwitchRoutes } from '@/routes';
 import { SwitcherMode } from '../switcher-mode';
 import * as classes from './navbar.styles';
-import { translate } from '@/translations/en';
 
 export const NavBar: React.FC = () => {
 
@@ -24,7 +23,7 @@ export const NavBar: React.FC = () => {
         <nav className={classes.navbarLinks}>
           <Link to={SwitchRoutes.root}>{capitalizing(t("header.home"))}</Link>
           <Link to={SwitchRoutes.addUser}>{capitalizing(t("header.addUser"))}</Link>
-          <Link to={SwitchRoutes.listUsers}>{capitalizing(t("header.userList"))}</Link>
+          <Link to={SwitchRoutes.listUsers}>{capitalizing(t("header.usersList"))}</Link>
         </nav>
         <nav className={classes.navbarFuncionalities}>
           <div className={classes.itemA}>
