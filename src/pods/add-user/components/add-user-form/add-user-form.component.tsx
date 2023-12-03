@@ -1,53 +1,56 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { GlobalContext, MyState, Users } from '@/core';
 import { BoxInput, Button } from '@/common';
 import { SwitchRoutes } from '@/routes';
+import { Word } from '@/translations';
 import * as classes from './add-user-form.styles';
 
-export const AddUserForm: React.FC = () => {
+interface Props {
+  addUser: Word["layout"]["addUser"];
+};
 
-  const { addOne, state, updateID } = React.useContext<MyState>(GlobalContext);
+export const AddUserForm: React.FC<Props> = ({ addUser }) => {
+  const { capitalizing ,addOne, state, updateID } = React.useContext<MyState>(GlobalContext);
   const { newID } = state;
 
   const navigate = useNavigate();
+  const [t] = useTranslation("global");
 
-  
   const [user, setUser] = React.useState<Users>({
-     id: newID,
-     name: '',
-     email: '',
-     password: '',
-     age: null,
-     employee: false
+    id: newID,
+    name: "",
+    email: "",
+    password: "",
+    age: null,
+    employee: false,
   });
 
   const handleChange =
-    (key: keyof Users) =>
-      (event: React.ChangeEvent<HTMLInputElement>) => {
-         const {target} = event;
-        if(target.value){
+    (key: keyof Users) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      const { target } = event;
+      if (target.value) {
         setUser({ ...user, [key]: event.target.value });
-      }else{
+      } else {
         setUser({ ...user, [key]: event.target.checked });
-      };
-   };
-   
+      }
+    };
 
- const handleSubmit: React.FormEventHandler<HTMLFormElement> | undefined = (
-   event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> | undefined = (
+    event: React.FormEvent<HTMLFormElement>
+  ) => {
     event.preventDefault();
-    
-    addOne(user)
+
+    addOne(user);
     console.log("User", user);
     updateID();
     navigate(`${SwitchRoutes.listUsers}`);
-   };
+  };
 
-     React.useEffect(() => {
-       setUser((prevUser) => ({ ...prevUser, id: newID }));
-     }, [newID]);
-
+  React.useEffect(() => {
+    setUser((prevUser) => ({ ...prevUser, id: newID }));
+  }, [newID]);
 
   return (
     <form className={classes.container} onSubmit={handleSubmit}>
@@ -56,7 +59,7 @@ export const AddUserForm: React.FC = () => {
         type="text"
         required
         value={user?.name || ""}
-        name="name"
+        name={capitalizing(t(addUser.name))}
         handleChange={handleChange("name")}
       />
       <BoxInput
@@ -64,7 +67,7 @@ export const AddUserForm: React.FC = () => {
         type="email"
         required
         value={user?.email || ""}
-        name="email"
+        name={capitalizing(t(addUser.email))}
         handleChange={handleChange("email")}
       />
       <BoxInput
@@ -72,7 +75,7 @@ export const AddUserForm: React.FC = () => {
         type="password"
         required
         value={user?.password || ""}
-        name="password"
+        name={capitalizing(t(addUser.password))}
         handleChange={handleChange("password")}
       />
       <BoxInput
@@ -80,7 +83,7 @@ export const AddUserForm: React.FC = () => {
         type="number"
         required
         value={user?.age || ""}
-        name="age"
+        name={capitalizing(t(addUser.age))}
         handleChange={handleChange("age")}
       />
       <div className={classes.boxCheckBox}>
@@ -88,11 +91,15 @@ export const AddUserForm: React.FC = () => {
           styles={classes.boxInputCheck}
           type="checkbox"
           check={user?.employee}
-          name="employee"
+          name={capitalizing(t(addUser.employee))}
           handleChange={handleChange("employee")}
         />
       </div>
-       <Button myStyle={classes.btnSubmit} text="Send" type="submit" />
+      <Button
+        myStyle={classes.btnSubmit}
+        text={capitalizing(t(addUser.send))}
+        type="submit"
+      />
     </form>
   );
-}
+};

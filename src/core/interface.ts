@@ -106,4 +106,5 @@ export interface MyState {
   deleteOne: (id: number | undefined) => void;
   addOne: (user: Users) => void;
   updateUser: (user: Users) => void;
+  capitalizing: (str: string) => string;
 };

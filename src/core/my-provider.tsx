@@ -55,6 +55,8 @@ export const MyProvider: React.FC<Props> = ({children}) => {
     [dispatch]
   );
 
+ const capitalizing = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
+
 
   return (
     <GlobalContext.Provider
@@ -66,6 +68,7 @@ export const MyProvider: React.FC<Props> = ({children}) => {
         addOne,
         updateID,
         updateUser,
+        capitalizing,
       }}
     >
       <div id={state.theme}>{children}</div>
