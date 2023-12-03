@@ -15,13 +15,13 @@ export const LinksPage: React.FC = () => {
 
   return (
     <section className={classes.section}>
-      <h2 className={classes.titlePages}>{capitalizing(t(layout.pages))}</h2>
+      <h2 className={classes.titlePages}>{capitalizing(t(layout.home.pages))}</h2>
       <div className={classes.boxLinks}>
         <Link to={SwitchRoutes?.addUser}>
-          {capitalizing(t(layout.addUser))}
+          {capitalizing(t(layout.home.addUser))}
         </Link>
         <Link to={SwitchRoutes?.listUsers}>
-          {capitalizing(t(layout.showUsers))}
+          {capitalizing(t(layout.home.showUsers))}
         </Link>
       </div>
     </section>
