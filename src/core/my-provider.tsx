@@ -55,7 +55,8 @@ export const MyProvider: React.FC<Props> = ({children}) => {
     [dispatch]
   );
 
- const capitalizing = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
+ const capitalizing = useCallback((str: string) => 
+        str.charAt(0).toUpperCase() + str.slice(1), [dispatch]);
 
 
   return (

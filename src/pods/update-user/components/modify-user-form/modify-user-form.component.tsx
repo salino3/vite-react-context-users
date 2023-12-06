@@ -1,20 +1,26 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { GlobalContext, MyState, Users } from "@/core";
 import { BoxInput, Button } from "@/common";
+import { Word } from "@/translations";
 import { SwitchRoutes } from "@/routes";
 import * as classes from "./modify-user-form.styles";
 
+interface Props {
+  updateUser: Word["layout"]["updateUser"];
+};
 
-export const ModifyUserForm: React.FC = () => {
-  const { updateUser, state } = React.useContext<MyState>(GlobalContext);
 
+export const ModifyUserForm: React.FC<Props> = ({updateUser}) => {
+  const {capitalizing, updateUser: updatingUser, state} = React.useContext<MyState>(GlobalContext);
+
+  const [t] = useTranslation("global");
   const navigate = useNavigate();
   const params = useParams();
 
   const oneUser = state?.users.filter(
-    (user: Users) => user?.id === Number(params.id)
-  )[0];
+    (user: Users) => user?.id === Number(params.id))[0];
 
   const [user, setUser] = React.useState<Users>(oneUser);
 console.log(user)
@@ -25,14 +31,14 @@ console.log(user)
         setUser({ ...user, [key]: event.target.value });
       } else {
         setUser({ ...user, [key]: event.target.checked });
-      }
+      };
     };
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> | undefined = (
     event: React.FormEvent<HTMLFormElement>
      ) => {event.preventDefault();
 
-    updateUser(user);
+    updatingUser(user);
     console.log("User", user);
     navigate(`${SwitchRoutes.listUsers}`);
   };
@@ -46,7 +52,7 @@ console.log(user)
         type="text"
         required
         value={user?.name || ""}
-        name="name"
+        name={`${capitalizing(t(updateUser.name))}`}
         handleChange={handleChange("name")}
       />
       <BoxInput
@@ -54,7 +60,7 @@ console.log(user)
         type="email"
         required
         value={user?.email || ""}
-        name="email"
+        name={`${capitalizing(t(updateUser.email))}`}
         handleChange={handleChange("email")}
       />
       <BoxInput
@@ -62,7 +68,7 @@ console.log(user)
         type="password"
         required
         value={user?.password || ""}
-        name="password"
+        name={`${capitalizing(t(updateUser.password))}`}
         handleChange={handleChange("password")}
       />
       <BoxInput
@@ -70,7 +76,7 @@ console.log(user)
         type="number"
         required
         value={user?.age || ""}
-        name="age"
+        name={`${capitalizing(t(updateUser.age))}`}
         handleChange={handleChange("age")}
       />
       <div className={classes.boxCheckBox}>
@@ -78,11 +84,15 @@ console.log(user)
           styles={classes.boxInputCheck}
           type="checkbox"
           check={user?.employee}
-          name="employee"
+          name={`${capitalizing(t(updateUser.employee))}`}
           handleChange={handleChange("employee")}
         />
       </div>
-      <Button myStyle={classes.btnSubmit} text="Send" type="submit" />
+      <Button
+        myStyle={classes.btnSubmit}
+        text={`${capitalizing(t(updateUser.send))}`}
+        type="submit"
+      />
     </form>
   );
 };

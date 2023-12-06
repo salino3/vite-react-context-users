@@ -35,7 +35,6 @@ export const NavBar: React.FC = () => {
           <div className={classes.itemA}>
             <SwitcherMode />
           </div>
-
           <div className={classes.boxLanguages}>
             <div className={classes.itemB} onClick={() => changeLanguage("en")}>
               English
