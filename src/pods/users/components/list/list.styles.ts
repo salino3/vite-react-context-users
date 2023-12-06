@@ -9,8 +9,7 @@ export const container = css`
   align-items: center;
   margin: 50px 0px;
   gap: 10px;
-  width: 30%;
-  
+  padding: 0px 10px;
 
   h2 {
     color: ${theme.colors.blues.indigoDye};

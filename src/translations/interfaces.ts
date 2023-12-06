@@ -35,6 +35,21 @@ export interface Word {
       employee: string;
       send: string;
     };
+    userList: {
+      title: string;
+      title2: string;
+      goBack: string;
+      noOne: string;
+      name: string;
+      email: string;
+      password: string;
+      age: string;
+      employee: string;
+      yes: string;
+      no: string;
+      update: string;
+      delete: string;
+    };
   };
 };
 
@@ -74,6 +89,21 @@ export const wordsPage: Word = {
       age: "layout.updateUser.age",
       employee: "layout.updateUser.employee",
       send: "layout.updateUser.send",
+    },
+    userList: {
+      title: "layout.userList.title",
+      title2: "layout.userList.title2",
+      goBack: "layout.userList.goBack",
+      noOne: "layout.userList.noOne",
+      name: "layout.userList.name",
+      email: "layout.userList.email",
+      password: "layout.userList.password",
+      age: "layout.userList.age",
+      employee: "layout.userList.employee",
+      yes: "layout.userList.yes",
+      no: "layout.userList.no",
+      update: "layout.userList.update",
+      delete: "layout.userList.delete",
     },
   },
 };
