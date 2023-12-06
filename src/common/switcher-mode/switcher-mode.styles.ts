@@ -12,6 +12,10 @@ export const switchMode = css`
   border-radius: 20px;
   width: min-content;
   min-width: 180px;
-  `;
+
+  @media (max-width: 420px) {
+    min-width: 100px;
+  }
+`;
 
 

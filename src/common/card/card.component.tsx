@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { GlobalContext, MyState, Users } from "@/core";
+import { Word } from "@/translations";
+import { SwitchRoutes } from "@/routes";
 import { Button } from "../button";
 import * as classes from "./card.styles";
-import { SwitchRoutes } from "@/routes";
-import { Word } from "@/translations";
-import { useTranslation } from "react-i18next";
 
 interface Props {
   userList: Word["layout"]["userList"];
