@@ -14,9 +14,14 @@ export const root = css`
   margin-top: 10px;
   font-family: cursive;
 
-  @media (max-width: 420px) {
-    grid-template-columns: 70% 30%;
+  @media (max-width: 1025px) and (min-width: 1000px) {
+    gap: 50px;
+  }
 
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    height: ${theme.spacing(25)};
   }
 `;
 
@@ -25,9 +30,9 @@ export const titleNav = css`
   justify-content: center;
   align-items: center;
   color: ${theme.colors.blues.lapisLazuli};
-  
-  @media (max-width: 420px) {
-   display: none
+
+  @media (max-width: 1025px) {
+    display: none;
   }
 `;
 
@@ -40,15 +45,24 @@ export const navbarLinks = css`
   justify-items: center;
   align-items: center;
   max-width: 500px;
+  @media (max-width: 1000px) {
+    gap: 30px;
+  }
 `;
 
 export const navbarFuncionalities = css`
   display: grid;
-  justify-content: space-around; 
+  justify-content: space-around;
   align-items: center;
-  grid-template-areas:
-    ". itemA . ."
-    " box box box box";
+  grid-template-areas: "itemA itemA box box";
+
+  @media (max-width: 1025px) and (min-width: 1000px) {
+    gap: 30px;
+  }
+
+  @media (max-width: 1000px) {
+    grid-template-areas: "itemA itemA box box";
+  }
 `;
 
 export const itemA = css`
@@ -67,6 +81,9 @@ export const boxLanguages = css`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  @media (max-width: 420px) {
+    gap: 10px;
+  }
 `;
 
 export const itemC = css`

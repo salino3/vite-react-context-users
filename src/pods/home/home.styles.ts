@@ -9,6 +9,9 @@ export const Div = styled.div`
   padding: ${theme.spacing(12)};
   height: 100%;
   margin-top: 70px;
+  @media (max-width: 1000px) {
+    margin-top: 90px;
+  }
 `;
 
 export const title = css`

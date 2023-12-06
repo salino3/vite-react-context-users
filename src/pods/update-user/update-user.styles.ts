@@ -10,7 +10,9 @@ export const root = css`
   align-items: center;
   gap: ${theme.spacing(5)};
   margin-top: 70px;
-
+  @media (max-width: 1000px) {
+    margin-top: 100px;
+  }
 `;
 
 export const title = css`
