@@ -44,7 +44,7 @@ export const boxBtns = css`
 
  display: flex;
  flex-direction: row;
- gap: 10px;
+ gap: 25px;
 `;
 
 export const btnUpdate = css`

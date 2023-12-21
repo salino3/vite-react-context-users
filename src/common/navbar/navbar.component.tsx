@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { GlobalContext, MyState } from '@/core';
+import { SwitcherMode } from '../switcher-mode';
 import { SwitchRoutes } from '@/routes';
 import {wordsPage} from '@/translations';
-import { SwitcherMode } from '../switcher-mode';
 import * as classes from './navbar.styles';
 
 export const NavBar: React.FC = () => {
@@ -35,7 +35,6 @@ export const NavBar: React.FC = () => {
           <div className={classes.itemA}>
             <SwitcherMode />
           </div>
-
           <div className={classes.boxLanguages}>
             <div className={classes.itemB} onClick={() => changeLanguage("en")}>
               English

@@ -43,7 +43,7 @@ export const container = css`
 export const boxInput = css`
   display: flex;
   flex-direction: column;
-  color: ${theme.colors.blues.emerald};
+  color: ${theme.colors.blues.cream};
   gap: 2px;
 
   input {

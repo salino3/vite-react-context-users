@@ -1,5 +1,9 @@
-export const layout = {
+import { Word } from "../interfaces";
+
+export const layout: Word["layout"] = {
   home: {
+    title: "web",
+    title2: "los Boquerones",
     pages: "páginas",
     addUser: "Añade usuario",
     showUsers: "muestra usuarios",
@@ -15,5 +19,31 @@ export const layout = {
     age: "edad",
     employee: "empleado",
     send: "envíar",
+  },
+  updateUser: {
+    title: "formulario",
+    title2: "usuario",
+    goBack: "ir átras",
+    name: "nombre",
+    email: "correo eletronico",
+    password: "contraseña",
+    age: "edad",
+    employee: "empleado",
+    send: "envíar",
+  },
+  userList: {
+    title: "lista",
+    title2: "usuarios",
+    goBack: "ir indietro",
+    noOne: "no hay nadie en la lista",
+    name: "name",
+    email: "email",
+    password: "contraseña",
+    age: "edad",
+    employee: "empleado",
+    yes: "si",
+    no: "no",
+    update: "actualizar",
+    delete: "eliminar",
   },
 };

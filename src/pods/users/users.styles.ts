@@ -8,6 +8,9 @@ export const Div = styled.div`
   align-items: center;
   height: 100%;
   margin-top: 70px;
+  @media (max-width: 1000px) {
+    margin-top: 90px;
+  }
 `;
 
 export const title = css`

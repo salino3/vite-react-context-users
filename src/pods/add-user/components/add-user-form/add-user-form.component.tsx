@@ -12,7 +12,7 @@ interface Props {
 };
 
 export const AddUserForm: React.FC<Props> = ({ addUser }) => {
-  const { capitalizing ,addOne, state, updateID } = React.useContext<MyState>(GlobalContext);
+  const { capitalizing, addOne, state, updateID } = React.useContext<MyState>(GlobalContext);
   const { newID } = state;
 
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ export const AddUserForm: React.FC<Props> = ({ addUser }) => {
         setUser({ ...user, [key]: event.target.value });
       } else {
         setUser({ ...user, [key]: event.target.checked });
-      }
+      };
     };
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> | undefined = (
