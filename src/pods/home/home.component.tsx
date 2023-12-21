@@ -13,6 +13,7 @@ export const HomeComponent: React.FC = () => {
    const [t] = useTranslation("global");
    const { layout } = wordsPage;
 
+   
   return (
     <classes.Div>
       <Title className={classes.title} txt={`${capitalizing(t(layout.home.title))} `} span={`${capitalizing(t(layout.home.title2))}`}/>
