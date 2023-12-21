@@ -5,12 +5,14 @@ import { theme } from "@/themes";
 export const Div = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   padding: ${theme.spacing(12)};
   height: 100%;
   margin-top: 70px;
   @media (max-width: 1000px) {
-    margin-top: 90px;
+    margin-top: 100px;
   }
 `;
 
