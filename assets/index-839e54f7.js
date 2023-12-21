@@ -475,7 +475,7 @@ Valid keys: `+JSON.stringify(Object.keys(N),null,"  "));var Pe=$(H,Z,B,X,W+"."+Z
   flex-direction: row;
   width: 100%;
   align-self: flex-start;
-  color: ${R.colors.blues.keppel};
+  color: ${R.colors.blues.cream};
   margin-bottom: ${R.spacing(5)};
 
   gap: ${R.spacing(5)};
