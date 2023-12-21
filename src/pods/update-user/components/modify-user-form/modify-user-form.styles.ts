@@ -65,7 +65,7 @@ export const boxInputCheck = css`
   flex-direction: row;
   width: 100%;
   align-self: flex-start;
-  color: ${theme.colors.blues.keppel};
+  color: ${theme.colors.blues.cream};
   margin-bottom: ${theme.spacing(5)};
 
   gap: ${theme.spacing(5)};
